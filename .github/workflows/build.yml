@@ -17,5 +17,3 @@ jobs:
       with:
         java-version: 8
         distribution: zulu
-    - name: build
-      run: ./gradlew check
