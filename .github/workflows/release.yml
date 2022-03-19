@@ -18,7 +18,9 @@ jobs:
       with:
         ref: ${{ steps.release.outputs.tag_name }}
     - uses: actions/setup-python@v3
+      if: ${{ steps.release.outputs.release_created }}
     - uses: asdf-vm/actions/install@v1
+      if: ${{ steps.release.outputs.release_created }}
     - uses: crazy-max/ghaction-import-gpg@v4
       if: ${{ steps.release.outputs.release_created }}
       with:
