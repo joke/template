@@ -13,15 +13,15 @@ jobs:
       id: release
       with:
         release-type: simple
+  publish:
+    runs-on: ubuntu-latest
+    if: ${{ steps.release.outputs.release_created }}
+    steps:
     - uses: actions/checkout@v3
-      if: ${{ steps.release.outputs.release_created }}
       with:
         ref: ${{ steps.release.outputs.tag_name }}
     - uses: actions/setup-python@v3
-      if: ${{ steps.release.outputs.release_created }}
     - uses: asdf-vm/actions/install@v1
-      if: ${{ steps.release.outputs.release_created }}
     - uses: crazy-max/ghaction-import-gpg@v4
-      if: ${{ steps.release.outputs.release_created }}
       with:
         gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
