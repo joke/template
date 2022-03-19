@@ -15,11 +15,11 @@ jobs:
         release-type: simple
   publish:
     runs-on: ubuntu-latest
-    if: ${{ jobs.release-please.steps.release.outputs.release_created }}
+    if: ${{ needs.jobs.release-please.steps.release.outputs.release_created }}
     steps:
     - uses: actions/checkout@v3
       with:
-        ref: ${{ jobs.release-please.steps.release.outputs.tag_name }}
+        ref: ${{ needs.jobs.release-please.steps.release.outputs.tag_name }}
     - uses: actions/setup-python@v3
     - uses: asdf-vm/actions/install@v1
     - uses: crazy-max/ghaction-import-gpg@v4
