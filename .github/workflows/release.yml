@@ -18,6 +18,7 @@ jobs:
         token: ${{ secrets.RELEASE_PLEASE }}
 
   publish:
+    needs: release-please
     runs-on: ubuntu-latest
     if: ${{ needs.release-please.outputs.release_created }}
     steps:
