@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.0.4](https://github.com/joke/template/compare/v1.0.3...v1.0.4) (2022-03-20)
+
+
+### Bug Fixes
+
+* publish via release please ([7fc1848](https://github.com/joke/template/commit/7fc18483e64c7af7151429ba7041dc4bd6da2838))
+* publish via release please ([ef5898c](https://github.com/joke/template/commit/ef5898c60c6682d3004319a7d90e4526bd4a2330))
+
 ### [1.0.3](https://github.com/joke/template/compare/v1.0.2...v1.0.3) (2022-03-20)
 
 
