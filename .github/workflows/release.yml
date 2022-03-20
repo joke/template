@@ -8,14 +8,17 @@ on:
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
     steps:
     - uses: GoogleCloudPlatform/release-please-action@v3.1
       id: release
       with:
         release-type: simple
+
   publish:
     runs-on: ubuntu-latest
-    if: ${{ needs.jobs.release-please.steps.release.outputs.release_created }}
+    if: ${{ needs.release-please.outputs.release_created }}
     steps:
     - uses: actions/checkout@v3
       with:
