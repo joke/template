@@ -1,0 +1,14 @@
+= Contributing Guidelines
+
+This project accepts contributions via GitHub pull requests.
+This document outlines the process to help get your contribution accepted.
+
+== Accept Developer Certificate of Origin
+
+Contributions will only be accepted, if you https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---signoff[sign off] your commits and thereby indicating you agreed to the terms of the _https://developercertificate.org/[Developer Certificate of Origin (DCO)]_.
+
+Commits will be checked by https://probot.github.io/apps/dco/[Probot DCO].
+
+== Conventional Commits
+
+Write commit messages in the style of https://www.conventionalcommits.org/en/v1.0.0/[Conventional Commits].

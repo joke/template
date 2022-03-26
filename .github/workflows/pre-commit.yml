@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
     - uses: actions/setup-python@v3
     - uses: asdf-vm/actions/install@v1
-    - uses: pre-commit/action@v2.0.3
+    - run: env | sort
+    - run: git branch -av
+    - run: pre-commit run --from-ref remotes/origin/${GITHUB_BASE_REF} --to-ref remotes/origin/${GITHUB_HEAD_REF}
