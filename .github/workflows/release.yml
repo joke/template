@@ -16,17 +16,6 @@ jobs:
       with:
         release-type: simple
 
-  # pass required status checks
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - run: 'echo "No build required" '
-  pre-commit:
-    runs-on: ubuntu-latest
-    steps:
-    - run: 'echo "No pre-commit required" '
-
-
   publish:
     needs: release-please
     runs-on: ubuntu-latest
