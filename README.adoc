@@ -4,4 +4,4 @@ image:https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-comm
 
 == Contributing
 
-If you're looking to contribute, you can find additional information in link:CONTRIBUTING.adoc[here].
+you're looking to contribute, you can find additional information in link:CONTRIBUTING.adoc[here].
